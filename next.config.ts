@@ -16,6 +16,17 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  async headers() {
+    return [
+      {
+        // Vercel URLs (roltek-web.vercel.app and per-deployment URLs) serve
+        // previews, so search engines must only index the real domain.
+        source: "/:path*",
+        has: [{ type: "host", value: "roltek-web(-[a-z0-9-]+)?\\.vercel\\.app" }],
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }],
+      },
+    ];
+  },
 };
 
 // Plugins are referenced by name so the config stays serializable for Turbopack.
