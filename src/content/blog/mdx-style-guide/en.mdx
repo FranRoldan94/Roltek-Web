@@ -1,0 +1,44 @@
+export const metadata = {
+  title: "MDX style guide",
+  description: "Internal test article used to validate the blog's typography, code highlighting and table of contents.",
+  publishedAt: "2026-10-26",
+  category: "engineering",
+  draft: true,
+};
+
+This draft is only shown in development. It is used to check how the different elements of an article look before publishing real content.
+
+## Text and emphasis
+
+A paragraph with **bold**, _italic_, `inline code` and an [internal link](/en/projects).
+
+> A pull quote to check the blockquote styles.
+
+## Code
+
+```tsx title="Button.tsx"
+type ButtonProps = { label: string; onPress: () => void };
+
+export function Button({ label, onPress }: ButtonProps) {
+  return <button onClick={onPress}>{label}</button>;
+}
+```
+
+### Swift
+
+```swift
+struct StepCounter {
+    private(set) var steps = 0
+    mutating func add(_ value: Int) { steps += value }
+}
+```
+
+## Lists and tables
+
+- First item
+- Second item
+
+| Layer | Responsibility |
+| --- | --- |
+| UI | Presentation |
+| Domain | Business rules |

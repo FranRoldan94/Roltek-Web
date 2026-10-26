@@ -1,9 +1,10 @@
 import type { NextConfig } from "next";
+import createMDX from "@next/mdx";
 
 const nextConfig: NextConfig = {
-  /* config options here */
   experimental: {
     agentFeedback: true,
+    globalNotFound: true,
   },
   cacheComponents: true,
   partialPrefetching: true,
@@ -17,4 +18,18 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Plugins are referenced by name so the config stays serializable for Turbopack.
+const withMDX = createMDX({
+  options: {
+    remarkPlugins: ["remark-gfm"],
+    rehypePlugins: [
+      "rehype-slug",
+      [
+        "rehype-pretty-code",
+        { theme: "github-dark-dimmed", keepBackground: false },
+      ],
+    ],
+  },
+});
+
+export default withMDX(nextConfig);

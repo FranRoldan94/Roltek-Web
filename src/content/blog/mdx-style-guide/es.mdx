@@ -1,0 +1,44 @@
+export const metadata = {
+  title: "Guía de estilo MDX",
+  description: "Artículo interno de prueba para validar la tipografía, el resaltado de código y la tabla de contenidos del blog.",
+  publishedAt: "2026-10-26",
+  category: "engineering",
+  draft: true,
+};
+
+Este borrador solo se muestra en desarrollo. Sirve para comprobar cómo se ven los distintos elementos de un artículo antes de publicar contenido real.
+
+## Texto y énfasis
+
+Un párrafo con **negrita**, _cursiva_, `código en línea` y un [enlace interno](/es/projects).
+
+> Una cita destacada para comprobar el estilo de los bloques de cita.
+
+## Código
+
+```tsx title="Button.tsx"
+type ButtonProps = { label: string; onPress: () => void };
+
+export function Button({ label, onPress }: ButtonProps) {
+  return <button onClick={onPress}>{label}</button>;
+}
+```
+
+### Swift
+
+```swift
+struct StepCounter {
+    private(set) var steps = 0
+    mutating func add(_ value: Int) { steps += value }
+}
+```
+
+## Listas y tablas
+
+- Primer elemento
+- Segundo elemento
+
+| Capa | Responsabilidad |
+| --- | --- |
+| UI | Presentación |
+| Dominio | Reglas de negocio |
