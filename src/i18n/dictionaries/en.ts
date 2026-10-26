@@ -156,7 +156,7 @@ const en = {
     rss: "RSS",
   },
   about: {
-    metaTitle: "About",
+    metaTitle: "About Fran Roldán, full-stack developer",
     metaDescription:
       "Fran Roldán, full-stack software developer behind ROLTEK. React, TypeScript, Java, Spring Boot and native mobile development.",
     eyebrow: "About",
@@ -199,7 +199,7 @@ const en = {
     linksTitle: "Find me",
   },
   projects: {
-    metaTitle: "Projects",
+    metaTitle: "Software projects",
     metaDescription:
       "Projects and products designed and built by Fran Roldán under ROLTEK.",
     eyebrow: "Projects",
@@ -237,7 +237,8 @@ const en = {
   },
   contact: {
     metaTitle: "Contact",
-    metaDescription: "Get in touch with Fran Roldán at ROLTEK.",
+    metaDescription:
+      "Write to Fran Roldán (ROLTEK) about web applications, native mobile apps or a software engineering challenge.",
     eyebrow: "Contact",
     title: "Let's talk.",
     intro:

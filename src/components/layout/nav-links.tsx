@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { motion } from "motion/react";
+import * as m from "motion/react-m";
 import { cn } from "@/lib/utils";
 
 export type NavItem = { href: string; label: string };
@@ -31,7 +31,7 @@ export function NavLinks({ items, label }: { items: NavItem[]; label: string }) 
               >
                 {item.label}
                 {active && (
-                  <motion.span
+                  <m.span
                     layoutId="nav-indicator"
                     aria-hidden="true"
                     className="absolute inset-x-3 -bottom-px h-px bg-accent"

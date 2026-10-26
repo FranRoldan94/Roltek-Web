@@ -4,7 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useId, useRef, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence } from "motion/react";
+import * as m from "motion/react-m";
 import type { Locale } from "@/i18n/config";
 import { cn } from "@/lib/utils";
 import { isActivePath, type NavItem } from "./nav-links";
@@ -59,20 +60,23 @@ export function MobileMenu({ items, locale, labels, contact }: MobileMenuProps) 
 
       <AnimatePresence>
         {open && (
-          <motion.div
+          <m.div
             id={panelId}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 top-16 z-40 flex flex-col bg-bg/95 backdrop-blur-xl"
+            // The header's backdrop-filter makes it the containing block for fixed
+            // children: the panel needs an explicit height, and its own backdrop blur
+            // would see nothing behind it, so the background is opaque.
+            className="fixed inset-x-0 top-16 z-40 flex h-[calc(100dvh-4rem)] flex-col overflow-y-auto bg-bg"
           >
             <nav aria-label={labels.nav} className="container-site flex-1 pt-8">
               <ul className="border-t border-line">
                 {[...items, contact].map((item, index) => {
                   const active = isActivePath(pathname, item.href);
                   return (
-                    <motion.li
+                    <m.li
                       key={item.href}
                       initial={{ opacity: 0, y: 8 }}
                       animate={{ opacity: 1, y: 0 }}
@@ -93,13 +97,13 @@ export function MobileMenu({ items, locale, labels, contact }: MobileMenuProps) 
                           {String(index + 1).padStart(2, "0")}
                         </span>
                       </Link>
-                    </motion.li>
+                    </m.li>
                   );
                 })}
               </ul>
               <LanguageSwitcher current={locale} label={labels.language} className="mt-8 w-fit" />
             </nav>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>

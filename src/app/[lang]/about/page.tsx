@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ArrowUpRight, Mail } from "lucide-react";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { siteConfig } from "@/config/site";
-import { pageMetadata, personJsonLd } from "@/lib/seo";
+import { pageMetadata, profilePageJsonLd } from "@/lib/seo";
 import { PageHeader } from "@/components/layout/page-header";
 import { JsonLd } from "@/components/ui/json-ld";
 import { MonoLabel } from "@/components/ui/mono-label";
@@ -27,7 +27,7 @@ export default async function AboutPage() {
 
   return (
     <>
-      <JsonLd data={personJsonLd(about.metaDescription)} />
+      <JsonLd data={profilePageJsonLd(locale, dict)} />
       <PageHeader eyebrow={about.eyebrow} title={about.title} />
 
       <div className="container-site grid gap-16 py-20 sm:py-28 lg:grid-cols-12 lg:gap-8">

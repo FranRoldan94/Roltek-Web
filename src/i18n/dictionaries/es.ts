@@ -158,7 +158,7 @@ const es: Dictionary = {
     rss: "RSS",
   },
   about: {
-    metaTitle: "Sobre mí",
+    metaTitle: "Sobre Fran Roldán, desarrollador full-stack",
     metaDescription:
       "Fran Roldán, desarrollador de software full-stack detrás de ROLTEK. React, TypeScript, Java, Spring Boot y desarrollo móvil nativo.",
     eyebrow: "Sobre mí",
@@ -201,7 +201,7 @@ const es: Dictionary = {
     linksTitle: "Encuéntrame",
   },
   projects: {
-    metaTitle: "Proyectos",
+    metaTitle: "Proyectos de software",
     metaDescription:
       "Proyectos y productos diseñados y desarrollados por Fran Roldán bajo ROLTEK.",
     eyebrow: "Proyectos",
@@ -239,7 +239,8 @@ const es: Dictionary = {
   },
   contact: {
     metaTitle: "Contacto",
-    metaDescription: "Ponte en contacto con Fran Roldán en ROLTEK.",
+    metaDescription:
+      "Escribe a Fran Roldán (ROLTEK) para hablar de aplicaciones web, apps móviles nativas o un reto de ingeniería de software.",
     eyebrow: "Contacto",
     title: "Hablemos.",
     intro:

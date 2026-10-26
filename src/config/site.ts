@@ -5,6 +5,8 @@
 export const siteConfig = {
   name: "ROLTEK",
   founder: "Fran Roldán",
+  /** Full name, published as Person.alternateName for name searches. */
+  founderFullName: "Francisco Roldán",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://roltek.es",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contacto@roltek.es",
   links: {
@@ -17,6 +19,7 @@ export const siteConfig = {
 } as const satisfies {
   name: string;
   founder: string;
+  founderFullName: string;
   url: string;
   email: string;
   links: Record<string, string>;

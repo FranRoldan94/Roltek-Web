@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
-import { pageMetadata, personJsonLd, websiteJsonLd } from "@/lib/seo";
+import { homeJsonLd, pageMetadata } from "@/lib/seo";
 import { JsonLd } from "@/components/ui/json-ld";
 import { Hero } from "@/components/sections/hero";
 import { FeaturedWork } from "@/components/sections/featured-work";
@@ -13,7 +13,12 @@ export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const dict = await getDictionary(locale);
   return {
-    ...pageMetadata({ locale, path: "/", description: dict.meta.description }),
+    ...pageMetadata({
+      locale,
+      path: "/",
+      socialTitle: dict.meta.title,
+      description: dict.meta.description,
+    }),
     title: { absolute: dict.meta.title },
   };
 }
@@ -24,8 +29,7 @@ export default async function HomePage() {
 
   return (
     <>
-      <JsonLd data={websiteJsonLd(locale, dict.meta.description)} />
-      <JsonLd data={personJsonLd(dict.about.metaDescription)} />
+      <JsonLd data={homeJsonLd(locale, dict)} />
       <Hero dict={dict} locale={locale} />
       <FeaturedWork dict={dict} locale={locale} />
       <Expertise dict={dict} />

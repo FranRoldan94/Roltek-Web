@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { getAllProjects, getNextProject, getProject } from "@/lib/projects";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, personRef, websiteRef } from "@/lib/seo";
 import { absoluteUrl, localizePath } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { JsonLd } from "@/components/ui/json-ld";
@@ -64,15 +64,24 @@ export default async function ProjectPage({
 
   return (
     <article>
+      {/*
+        A case study, not a store listing: SoftwareApplication belongs on a
+        product page with real platforms and offers (e.g. /apps/steporbit).
+      */}
       <JsonLd
         data={{
           "@context": "https://schema.org",
-          "@type": "SoftwareApplication",
+          "@type": "CreativeWork",
           name: project.title,
           description: project.description[locale],
-          applicationCategory: project.categories.includes("mobile") ? "MobileApplication" : "WebApplication",
           url: absoluteUrl(localizePath(locale, `/projects/${slug}`)),
-          author: { "@type": "Person", name: siteConfig.founder },
+          inLanguage: locale,
+          dateCreated: String(project.year),
+          keywords: project.technologies.join(", "),
+          image: absoluteUrl(`/${locale}/projects/${slug}/opengraph-image/og`),
+          author: { ...personRef, name: siteConfig.founder },
+          isPartOf: websiteRef(locale),
+          ...(project.githubUrl ? { codeRepository: project.githubUrl } : {}),
           ...(project.liveUrl ? { sameAs: project.liveUrl } : {}),
         }}
       />
