@@ -62,6 +62,10 @@ El tiempo de lectura, la tabla de contenidos (a partir de `##` y `###`), el site
 
 **Imágenes Open Graph:** se generan solas para cada página, proyecto y artículo (`opengraph-image.tsx` en cada ruta) con la plantilla de `src/lib/og.tsx` y las fuentes Geist de `src/assets/fonts/`. No hay que crear ninguna imagen a mano.
 
+## SEO
+
+Metadatos, datos estructurados, sitemap, 404 reales, Search Console y roadmap: ver [`docs/SEO.md`](docs/SEO.md).
+
 ## Futuras páginas de producto
 
 Las páginas como `/apps/steporbit` van en `src/app/[lang]/apps/<producto>/`, con su propio `layout.tsx` si necesitan otra identidad visual. Heredan idioma, metadatos y estilos sin tocar el resto.

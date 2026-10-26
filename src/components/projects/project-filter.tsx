@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import { AnimatePresence, motion } from "motion/react";
+import { AnimatePresence } from "motion/react";
+import * as m from "motion/react-m";
 import type { ProjectCategory } from "@/types/content";
 import { cn } from "@/lib/utils";
 
@@ -42,7 +43,7 @@ export function ProjectFilter({ filters, items, labels }: ProjectFilterProps) {
                 )}
               >
                 {selected && (
-                  <motion.span
+                  <m.span
                     layoutId="project-filter"
                     aria-hidden="true"
                     className="absolute inset-0 rounded-full border border-line-strong bg-white/[0.05]"
@@ -70,7 +71,7 @@ export function ProjectFilter({ filters, items, labels }: ProjectFilterProps) {
         <ul className="mt-10 grid gap-6 md:grid-cols-2">
           <AnimatePresence mode="popLayout" initial={false}>
             {visible.map((item) => (
-              <motion.li
+              <m.li
                 key={item.slug}
                 layout
                 initial={{ opacity: 0, y: 12 }}
@@ -80,7 +81,7 @@ export function ProjectFilter({ filters, items, labels }: ProjectFilterProps) {
                 className={cn(visible.length === 1 && "md:col-span-2")}
               >
                 {item.card}
-              </motion.li>
+              </m.li>
             ))}
           </AnimatePresence>
         </ul>

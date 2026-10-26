@@ -1,28 +1,24 @@
-"use client";
-
-import { motion } from "motion/react";
-import type { ReactNode } from "react";
+import type { CSSProperties, ReactNode } from "react";
 
 type RevealProps = {
   children: ReactNode;
   className?: string;
+  /** Seconds to wait once the element enters the viewport. */
   delay?: number;
   as?: "div" | "li" | "section" | "article";
 };
 
 /**
- * Fades content in once it enters the viewport.
- * Reduced-motion users get the final state immediately (see MotionProvider).
+ * Fades content in once it enters the viewport. Rendered on the server and
+ * visible by default: only <RevealObserver /> hides it, after hydration and
+ * below the fold, so crawlers, no-JS visitors and the LCP never wait for it.
  */
-export function Reveal({ children, className, delay = 0, as = "div" }: RevealProps) {
-  const Component = motion[as];
+export function Reveal({ children, className, delay = 0, as: Component = "div" }: RevealProps) {
   return (
     <Component
+      data-reveal=""
       className={className}
-      initial={{ opacity: 0, y: 14 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "0px 0px -10% 0px" }}
-      transition={{ duration: 0.7, delay, ease: [0.16, 1, 0.3, 1] }}
+      style={delay ? ({ "--reveal-delay": `${delay}s` } as CSSProperties) : undefined}
     >
       {children}
     </Component>

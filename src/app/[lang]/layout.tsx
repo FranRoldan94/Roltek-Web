@@ -6,6 +6,7 @@ import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/header";
 import { Footer } from "@/components/layout/footer";
 import { MotionProvider } from "@/components/ui/motion-provider";
+import { RevealObserver } from "@/components/ui/reveal-observer";
 import "@/styles/globals.css";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -30,6 +31,12 @@ export async function generateMetadata(): Promise<Metadata> {
     applicationName: siteConfig.name,
     authors: [{ name: siteConfig.founder, url: siteConfig.url }],
     creator: siteConfig.founder,
+    // Allow large image previews and full snippets in Search and Discover.
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+    },
   };
 }
 
@@ -56,6 +63,7 @@ export default async function RootLayout({ children }: LayoutProps<"/[lang]">) {
           </main>
           <Footer />
         </MotionProvider>
+        <RevealObserver />
       </body>
     </html>
   );

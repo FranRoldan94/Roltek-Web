@@ -38,7 +38,7 @@ export function Hero({ dict, locale }: { dict: Dictionary; locale: Locale }) {
           >
             <span className="animate-rise block" style={delay(80)}>
               {hero.titleLine1}
-            </span>
+            </span>{" "}
             <span className="animate-rise block text-muted" style={delay(180)}>
               {hero.titleLine2}
             </span>

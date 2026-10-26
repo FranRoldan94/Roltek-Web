@@ -10,14 +10,15 @@ import { ButtonLink } from "@/components/ui/button";
 export async function generateMetadata(): Promise<Metadata> {
   const locale = await getLocale();
   const { blog } = await getDictionary(locale);
-  return {
-    ...pageMetadata({
-      locale,
-      path: "/blog",
-      title: blog.metaTitle,
-      description: blog.metaDescription,
-    }),
-  };
+  const posts = await getPosts(locale);
+  return pageMetadata({
+    locale,
+    path: "/blog",
+    title: blog.metaTitle,
+    description: blog.metaDescription,
+    // An index without articles is thin content: keep it out of results until the first post.
+    noindex: posts.length === 0,
+  });
 }
 
 export default async function BlogPage() {

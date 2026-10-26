@@ -6,7 +6,7 @@ import { ArrowLeft } from "lucide-react";
 import { getDictionary, getLocale } from "@/i18n/get-dictionary";
 import { isLocale, locales } from "@/i18n/config";
 import { getPost, getPostContent, getPosts } from "@/lib/blog";
-import { pageMetadata } from "@/lib/seo";
+import { pageMetadata, personRef, websiteRef } from "@/lib/seo";
 import { absoluteUrl, formatDate, localizePath } from "@/lib/utils";
 import { siteConfig } from "@/config/site";
 import { JsonLd } from "@/components/ui/json-ld";
@@ -42,7 +42,9 @@ export async function generateMetadata({
     description: post.description,
     type: "article",
     publishedTime: post.publishedAt,
+    modifiedTime: post.updatedAt,
     availableLocales: available,
+    noindex: post.draft,
   });
 }
 
@@ -67,7 +69,12 @@ export default async function PostPage({ params }: PageProps<"/[lang]/blog/[slug
           dateModified: post.updatedAt ?? post.publishedAt,
           inLanguage: locale,
           url: absoluteUrl(localizePath(locale, `/blog/${slug}`)),
-          author: { "@type": "Person", name: siteConfig.founder, url: siteConfig.url },
+          mainEntityOfPage: absoluteUrl(localizePath(locale, `/blog/${slug}`)),
+          image: absoluteUrl(`/${locale}/blog/${slug}/opengraph-image/og`),
+          articleSection: dict.postCategories[post.category],
+          author: { ...personRef, name: siteConfig.founder, url: siteConfig.url },
+          publisher: personRef,
+          isPartOf: websiteRef(locale),
         }}
       />
 

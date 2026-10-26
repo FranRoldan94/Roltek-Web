@@ -4,7 +4,7 @@ import { getAllProjects } from "@/lib/projects";
 import { getPosts } from "@/lib/blog";
 import { absoluteUrl, localizePath } from "@/lib/utils";
 
-const staticPaths = ["/", "/about", "/projects", "/blog", "/contact", "/privacy"];
+const staticPaths = ["/", "/about", "/projects", "/contact", "/privacy"];
 
 function entry(
   path: string,
@@ -31,8 +31,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return entry(`/blog/${slug}`, available, post.updatedAt ?? post.publishedAt);
   });
 
+  // The blog index is noindex while it has no articles (see blog/page.tsx).
+  const blogIndex = slugs.size > 0 ? entry("/blog") : [];
+
   return [
     ...staticPaths.flatMap((path) => entry(path)),
+    ...blogIndex,
     ...getAllProjects().flatMap((project) => entry(`/projects/${project.slug}`)),
     ...posts,
   ];
