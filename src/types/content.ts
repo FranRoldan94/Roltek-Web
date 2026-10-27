@@ -34,6 +34,8 @@ export type Project = {
   outcomes?: Localized<string[]>;
   githubUrl?: string;
   liveUrl?: string;
+  /** Locale-relative path to the app's privacy policy, e.g. "/privacy/steporbit". */
+  privacyPath?: string;
   featured: boolean;
 };
 

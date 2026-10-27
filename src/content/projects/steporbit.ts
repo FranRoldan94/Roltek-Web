@@ -16,5 +16,6 @@ export const steporbit: Project = {
   year: 2026,
   status: "in-development",
   visual: "orbit",
+  privacyPath: "/privacy/steporbit",
   featured: true,
 };

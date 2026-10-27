@@ -223,6 +223,8 @@ const es: Dictionary = {
     inProgressNote:
       "Este proyecto está en desarrollo activo. Este caso de estudio crecerá a medida que evolucione.",
     next: "Siguiente proyecto",
+    privacy: "Privacidad",
+    privacyLink: "Política de privacidad de la app",
   },
   blog: {
     metaTitle: "Blog",
@@ -316,6 +318,75 @@ const es: Dictionary = {
         title: "Cambios en esta política",
         body: [
           "Si esta política cambia, actualizaré la fecha que aparece al principio de la página.",
+        ],
+      },
+    ],
+  },
+  steporbitPrivacy: {
+    metaTitle: "Política de privacidad de StepOrbit",
+    metaDescription:
+      "Cómo trata tus datos StepOrbit, la app de pasos para Apple Watch de ROLTEK: lee tus pasos de Salud y nada sale de tu reloj.",
+    eyebrow: "StepOrbit · Legal",
+    title: "Política de privacidad de StepOrbit",
+    updated: "Última actualización",
+    sections: [
+      {
+        title: "Responsable",
+        body: [
+          "{name} (NIF {taxId}), con domicilio en {address}, desarrolla y publica StepOrbit bajo la marca ROLTEK. Esta política explica cómo trata tus datos la app StepOrbit para Apple Watch, incluida su complicación para la esfera. Para cualquier duda, escríbeme a {email}.",
+        ],
+      },
+      {
+        title: "En resumen",
+        body: [
+          "StepOrbit no recopila tus datos ni los envía a ningún servidor. No tiene cuentas de usuario, servidores propios, analítica, publicidad ni SDK de terceros. Todo lo que hace la app ocurre en tu Apple Watch.",
+        ],
+      },
+      {
+        title: "Datos de salud (HealthKit)",
+        body: [
+          "Con tu permiso, StepOrbit lee de la app Salud (HealthKit) el número de pasos de hoy. Es el único dato de salud al que accede, y solo lo lee: nunca escribe ni modifica datos en Salud.",
+          "Los pasos se usan exclusivamente para mostrarte tu recuento diario, tu progreso hacia el objetivo y la complicación de la esfera. No se usan con fines publicitarios ni de marketing, no se venden y no se comparten con nadie, tampoco con servicios en la nube.",
+        ],
+      },
+      {
+        title: "Datos que la app guarda en el reloj",
+        body: [
+          "Para funcionar, StepOrbit guarda en el almacenamiento local del Apple Watch, compartido solo entre la app y su complicación, el objetivo diario que configures, el último recuento de pasos y la hora en que se obtuvo. Este último sirve para que la complicación muestre un valor aunque Salud no esté disponible un momento, por ejemplo con el reloj bloqueado.",
+          "La app no envía estos datos a ningún sitio. Se eliminan al desinstalarla.",
+        ],
+      },
+      {
+        title: "A qué datos tengo acceso",
+        body: [
+          "A ninguno. Como todo ocurre en tu reloj, no puedo ver tus pasos, tu objetivo ni ningún otro dato que use la app.",
+        ],
+      },
+      {
+        title: "Diagnósticos de Apple",
+        body: [
+          "Si en tu iPhone has aceptado compartir datos de análisis con los desarrolladores, Apple puede facilitarme informes de fallos y estadísticas de uso agregadas y anónimas a través de App Store Connect. Los recopila y gestiona Apple según su propia política de privacidad, y solo los uso para corregir errores y mejorar la app.",
+          "Puedes desactivarlo en el iPhone, en Ajustes > Privacidad y seguridad > Análisis y mejoras.",
+        ],
+      },
+      {
+        title: "Cómo controlar tus datos",
+        body: [
+          "Dar acceso a Salud es opcional. Puedes concederlo o retirarlo cuando quieras en el iPhone, en Ajustes > Privacidad y seguridad > Salud > StepOrbit. Sin ese permiso, la app no puede mostrar tus pasos.",
+          "Para borrar todos los datos de StepOrbit, desinstala la app del Apple Watch.",
+        ],
+      },
+      {
+        title: "Tus derechos",
+        body: [
+          "Como no trato tus datos en ningún servidor, no guardo información tuya que pueda consultar, rectificar o borrar: todo está bajo tu control en el reloj. Si me escribes a {email}, ese correo se trata según la política de privacidad general de {domain}.",
+          "Si consideras que tus datos no se han tratado correctamente, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).",
+        ],
+      },
+      {
+        title: "Cambios en esta política",
+        body: [
+          "Si StepOrbit empieza a tratar otros datos, actualizaré esta política antes de publicar esa versión y cambiaré la fecha que aparece al principio de la página.",
         ],
       },
     ],

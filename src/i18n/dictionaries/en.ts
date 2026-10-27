@@ -221,6 +221,8 @@ const en = {
     inProgressNote:
       "This project is under active development. This case study will grow as it evolves.",
     next: "Next project",
+    privacy: "Privacy",
+    privacyLink: "App privacy policy",
   },
   blog: {
     metaTitle: "Blog",
@@ -314,6 +316,75 @@ const en = {
         title: "Changes to this policy",
         body: [
           "If this policy changes, I will update the date shown at the top of the page.",
+        ],
+      },
+    ],
+  },
+  steporbitPrivacy: {
+    metaTitle: "StepOrbit privacy policy",
+    metaDescription:
+      "How StepOrbit, ROLTEK's step counter for Apple Watch, handles your data: it reads your steps from Health and nothing leaves your watch.",
+    eyebrow: "StepOrbit · Legal",
+    title: "StepOrbit privacy policy",
+    updated: "Last updated",
+    sections: [
+      {
+        title: "Who is responsible",
+        body: [
+          "{name} (Spanish tax ID {taxId}), with address at {address}, develops and publishes StepOrbit under the ROLTEK brand. This policy explains how the StepOrbit app for Apple Watch, including its watch face complication, handles your data. If you have any questions, write to me at {email}.",
+        ],
+      },
+      {
+        title: "In short",
+        body: [
+          "StepOrbit doesn't collect your data or send it to any server. It has no user accounts, no servers of its own, no analytics, no advertising and no third-party SDKs. Everything the app does happens on your Apple Watch.",
+        ],
+      },
+      {
+        title: "Health data (HealthKit)",
+        body: [
+          "With your permission, StepOrbit reads today's step count from the Health app (HealthKit). It is the only health data the app accesses, and it only reads it: it never writes or changes data in Health.",
+          "Your steps are used only to show your daily count, your progress towards your goal and the watch face complication. They are not used for advertising or marketing, they are not sold and they are not shared with anyone, including cloud services.",
+        ],
+      },
+      {
+        title: "Data the app stores on your watch",
+        body: [
+          "To work, StepOrbit stores the following in your Apple Watch's local storage, shared only between the app and its complication: the daily goal you set, your latest step count and the time it was read. The latter lets the complication show a value even when Health is briefly unavailable, for example while the watch is locked.",
+          "The app doesn't send this data anywhere. It is deleted when you uninstall the app.",
+        ],
+      },
+      {
+        title: "What data I can access",
+        body: [
+          "None. Because everything happens on your watch, I can't see your steps, your goal or any other data the app uses.",
+        ],
+      },
+      {
+        title: "Apple diagnostics",
+        body: [
+          "If you have agreed to share analytics with app developers on your iPhone, Apple may provide me with crash reports and aggregated, anonymous usage statistics through App Store Connect. Apple collects and manages them under its own privacy policy, and I only use them to fix bugs and improve the app.",
+          "You can turn this off on your iPhone in Settings > Privacy & Security > Analytics & Improvements.",
+        ],
+      },
+      {
+        title: "How to control your data",
+        body: [
+          "Giving access to Health is optional. You can grant or revoke it at any time on your iPhone in Settings > Privacy & Security > Health > StepOrbit. Without it, the app can't show your steps.",
+          "To delete all StepOrbit data, uninstall the app from your Apple Watch.",
+        ],
+      },
+      {
+        title: "Your rights",
+        body: [
+          "Because I don't process your data on any server, I don't hold any information about you that could be accessed, corrected or deleted: it is all under your control on your watch. If you email me at {email}, that message is handled under the general privacy policy of {domain}.",
+          "If you believe your data has not been handled properly, you can lodge a complaint with the Spanish Data Protection Agency (www.aepd.es).",
+        ],
+      },
+      {
+        title: "Changes to this policy",
+        body: [
+          "If StepOrbit starts processing other data, I will update this policy before releasing that version and change the date shown at the top of the page.",
         ],
       },
     ],

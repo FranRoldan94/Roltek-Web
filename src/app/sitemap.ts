@@ -4,7 +4,15 @@ import { getAllProjects } from "@/lib/projects";
 import { getPosts } from "@/lib/blog";
 import { absoluteUrl, localizePath } from "@/lib/utils";
 
-const staticPaths = ["/", "/about", "/projects", "/contact", "/privacy", "/legal"];
+const staticPaths = [
+  "/",
+  "/about",
+  "/projects",
+  "/contact",
+  "/privacy",
+  "/privacy/steporbit",
+  "/legal",
+];
 
 function entry(
   path: string,
