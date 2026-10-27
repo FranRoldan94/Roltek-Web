@@ -9,11 +9,12 @@ export const mainNav: { key: Exclude<NavKey, "contact">; href: string }[] = [
   { key: "blog", href: "/blog" },
 ];
 
-export const footerNav: { key: NavKey | "privacy"; href: string }[] = [
+export const footerNav: { key: NavKey | "privacy" | "legal"; href: string }[] = [
   { key: "home", href: "/" },
   { key: "projects", href: "/projects" },
   { key: "about", href: "/about" },
   { key: "blog", href: "/blog" },
   { key: "contact", href: "/contact" },
   { key: "privacy", href: "/privacy" },
+  { key: "legal", href: "/legal" },
 ];

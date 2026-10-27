@@ -153,6 +153,7 @@ const en = {
     elsewhere: "Elsewhere",
     rights: "All rights reserved.",
     privacy: "Privacy",
+    legal: "Legal notice",
     rss: "RSS",
   },
   about: {
@@ -249,40 +250,124 @@ const en = {
   },
   privacy: {
     metaTitle: "Privacy policy",
-    metaDescription: "How roltek.es handles your data.",
+    metaDescription: "How roltek.es handles your personal data and which cookies it uses.",
     eyebrow: "Legal",
     title: "Privacy policy",
     updated: "Last updated",
     sections: [
       {
-        title: "Who is responsible",
+        title: "Data controller",
         body: [
-          "This website is run by Fran Roldán under the ROLTEK brand. For any privacy question you can write to the contact email shown below.",
+          "{name} (Spanish tax ID {taxId}), with address at {address}, is the controller of the personal data processed through {domain}, the website I publish under the name ROLTEK. You can reach me at {email}.",
         ],
       },
       {
-        title: "Data this site collects",
+        title: "Data I process",
         body: [
-          "This site has no user accounts, no contact forms, no analytics and no advertising trackers.",
-          "If you email me, I will use your address and message only to reply to you, and I will not share them with third parties.",
+          "This site has no user accounts, no forms, no analytics and no advertising trackers.",
+          "I only process the data you send me by email (your address, your name if you include it and the content of your message) and the technical data any web server logs when serving pages, such as your IP address, browser and the date of your visit.",
+          "Writing to me is voluntary. If you don't give me an email address, I simply won't be able to reply.",
+        ],
+      },
+      {
+        title: "Purpose and legal basis",
+        body: [
+          "I use the data in your messages only to reply to you and keep up the conversation you start. The legal basis is my legitimate interest in answering the enquiries I receive and, if you write to propose a project, taking steps at your request before a possible agreement (Art. 6(1)(f) and 6(1)(b) GDPR).",
+          "Server logs are processed on the basis of the legitimate interest in serving the site securely and preventing abuse (Art. 6(1)(f) GDPR).",
+          "I don't make automated decisions or build profiles.",
+        ],
+      },
+      {
+        title: "How long I keep data",
+        body: [
+          "I keep emails for as long as needed to handle your enquiry and at most two years after our last contact, unless you ask me to delete them sooner or they must be kept to meet a legal obligation.",
+          "Server logs are kept by the hosting provider for short periods, under its own policy.",
+        ],
+      },
+      {
+        title: "Recipients",
+        body: [
+          "I don't share your data with third parties unless the law requires it. To run, the site relies on providers acting as processors: Vercel Inc. (web hosting) and Cloudflare, Inc. (receiving and forwarding email for {domain}), plus the provider of the mailbox where I read that email.",
+        ],
+      },
+      {
+        title: "International transfers",
+        body: [
+          "Vercel and Cloudflare are US companies, so some data may be processed outside the European Economic Area. Both participate in the EU-U.S. Data Privacy Framework, which the European Commission recognises as ensuring an adequate level of protection.",
         ],
       },
       {
         title: "Cookies",
         body: [
-          "The site only stores a technical cookie (NEXT_LOCALE) when you change the language manually, so your choice is remembered. It contains no personal data and is not used for tracking.",
-        ],
-      },
-      {
-        title: "Hosting",
-        body: [
-          "The site is hosted on Vercel, which may process technical data such as your IP address in server logs to deliver pages and protect the service.",
+          "{domain} uses no analytics, advertising or third-party cookies. That's why you won't see a cookie banner.",
+          "There is a single first-party technical cookie, NEXT_LOCALE, stored when you change the language manually so your choice is remembered. It lasts one year, contains no personal data and is not used for tracking. Because it is needed for a feature you ask for, it doesn't require consent (Art. 22.2 of the Spanish LSSI). You can delete it at any time from your browser settings.",
         ],
       },
       {
         title: "Your rights",
         body: [
-          "You can request access to, correction of or deletion of any personal data you have sent me by writing to the contact email.",
+          "You can exercise your rights of access, rectification, erasure, objection, restriction of processing and data portability by writing to {email}. I will reply within one month at the latest.",
+          "If you believe I haven't handled your data properly, you can lodge a complaint with the Spanish Data Protection Agency (www.aepd.es).",
+        ],
+      },
+      {
+        title: "Changes to this policy",
+        body: [
+          "If this policy changes, I will update the date shown at the top of the page.",
+        ],
+      },
+    ],
+  },
+  legal: {
+    metaTitle: "Legal notice",
+    metaDescription: "Owner, terms of use and intellectual property of roltek.es.",
+    eyebrow: "Legal",
+    title: "Legal notice",
+    updated: "Last updated",
+    owner: {
+      name: "Owner",
+      taxId: "Tax ID (NIF)",
+      address: "Address",
+      email: "Email",
+    },
+    sections: [
+      {
+        title: "Website owner",
+        body: [
+          "In compliance with Article 10 of Spanish Law 34/2002 on information society services and electronic commerce (LSSI-CE), {domain} is the personal website of {name}, whose identification details are shown above.",
+          "ROLTEK is the name I publish my work under; it is not a company or a registered trademark. The site doesn't sell products or provide services online: its purpose is to present my projects and professional background.",
+        ],
+      },
+      {
+        title: "Terms of use",
+        body: [
+          "Access to the site is free and requires no registration. By browsing it you agree to use it lawfully, without harming how it works or trying to access parts that aren't public.",
+        ],
+      },
+      {
+        title: "Intellectual property",
+        body: [
+          "The text, designs, logos, images and original code of this site belong to {name} unless stated otherwise. You may link to and quote the content with attribution; for any other use, ask for permission first.",
+          "Code published in open repositories is governed by the licence stated in each repository. Third-party names and trademarks belong to their respective owners.",
+        ],
+      },
+      {
+        title: "Liability",
+        body: [
+          "I try to keep the information accurate and up to date, but I can't guarantee it is error-free or that the site will always be available.",
+          "Links to external sites are provided for convenience. I don't control their content and am not responsible for it.",
+        ],
+      },
+      {
+        title: "Data protection",
+        body: [
+          "How your personal data is handled and which cookies the site uses is explained in the privacy policy, linked in the footer.",
+        ],
+      },
+      {
+        title: "Governing law",
+        body: [
+          "This legal notice is governed by Spanish law. Any dispute will be submitted to the courts that have jurisdiction under the law; if you act as a consumer, those of your place of residence.",
         ],
       },
     ],
