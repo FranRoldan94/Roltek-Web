@@ -209,6 +209,19 @@ export default async function ProjectPage({
             </div>
           </section>
 
+          {project.privacyPath && (
+            <section>
+              <MonoLabel as="h2">{dict.project.privacy}</MonoLabel>
+              <Link
+                href={localizePath(locale, project.privacyPath)}
+                className="group mt-4 inline-flex items-center gap-2 underline decoration-line-strong underline-offset-4 transition-colors hover:decoration-accent"
+              >
+                {dict.project.privacyLink}
+                <ArrowRight aria-hidden="true" className="size-4 text-muted transition-transform group-hover:translate-x-0.5" />
+              </Link>
+            </section>
+          )}
+
           {project.gallery && project.gallery.length > 0 && (
             <section aria-labelledby="gallery-title">
               <h2 id="gallery-title" className="text-3xl font-semibold tracking-tight">{dict.project.gallery}</h2>

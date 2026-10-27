@@ -12,7 +12,7 @@ import { CurrentYear } from "./current-year";
 export async function Footer() {
   const locale = await getLocale();
   const dict = await getDictionary(locale);
-  const labels = { ...dict.nav, privacy: dict.footer.privacy };
+  const labels = { ...dict.nav, privacy: dict.footer.privacy, legal: dict.footer.legal };
 
   return (
     <footer className="mt-auto border-t border-line">

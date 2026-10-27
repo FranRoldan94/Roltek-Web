@@ -155,6 +155,7 @@ const es: Dictionary = {
     elsewhere: "En otros sitios",
     rights: "Todos los derechos reservados.",
     privacy: "Privacidad",
+    legal: "Aviso legal",
     rss: "RSS",
   },
   about: {
@@ -222,6 +223,8 @@ const es: Dictionary = {
     inProgressNote:
       "Este proyecto está en desarrollo activo. Este caso de estudio crecerá a medida que evolucione.",
     next: "Siguiente proyecto",
+    privacy: "Privacidad",
+    privacyLink: "Política de privacidad de la app",
   },
   blog: {
     metaTitle: "Blog",
@@ -251,40 +254,193 @@ const es: Dictionary = {
   },
   privacy: {
     metaTitle: "Política de privacidad",
-    metaDescription: "Cómo trata roltek.es tus datos.",
+    metaDescription: "Cómo trata roltek.es tus datos personales y qué cookies usa.",
     eyebrow: "Legal",
     title: "Política de privacidad",
     updated: "Última actualización",
     sections: [
       {
-        title: "Responsable",
+        title: "Responsable del tratamiento",
         body: [
-          "Este sitio web lo gestiona Fran Roldán bajo la marca ROLTEK. Para cualquier cuestión sobre privacidad puedes escribir al email de contacto indicado más abajo.",
+          "{name} (NIF {taxId}), con domicilio en {address}, es el responsable de los datos personales que se traten a través de {domain}, el sitio web que publico bajo el nombre ROLTEK. Puedes contactar conmigo en {email}.",
         ],
       },
       {
-        title: "Datos que recoge este sitio",
+        title: "Qué datos trato",
         body: [
-          "Este sitio no tiene cuentas de usuario, formularios de contacto, analítica ni rastreadores publicitarios.",
-          "Si me escribes un email, usaré tu dirección y tu mensaje únicamente para responderte, y no los compartiré con terceros.",
+          "Este sitio no tiene cuentas de usuario, formularios, analítica ni rastreadores publicitarios.",
+          "Solo trato los datos que tú me envías por correo electrónico (tu dirección, tu nombre si lo indicas y el contenido del mensaje) y los datos técnicos que cualquier servidor web registra al servir las páginas, como la dirección IP, el navegador y la fecha de la visita.",
+          "Escribirme es voluntario. Si no me facilitas un email, simplemente no podré responderte.",
+        ],
+      },
+      {
+        title: "Finalidad y base jurídica",
+        body: [
+          "Uso los datos de tus mensajes únicamente para responderte y mantener la conversación que inicies. La base jurídica es mi interés legítimo en atender las consultas que recibo y, si me escribes para proponer un proyecto, la aplicación de medidas precontractuales a petición tuya (art. 6.1.f y 6.1.b del RGPD).",
+          "Los registros técnicos del servidor se tratan por el interés legítimo en servir el sitio de forma segura y prevenir abusos (art. 6.1.f del RGPD).",
+          "No tomo decisiones automatizadas ni elaboro perfiles.",
+        ],
+      },
+      {
+        title: "Cuánto tiempo conservo los datos",
+        body: [
+          "Conservo los correos el tiempo necesario para atender tu consulta y, como máximo, dos años desde el último contacto, salvo que me pidas antes su supresión o que deban conservarse para cumplir una obligación legal.",
+          "Los registros técnicos los conserva el proveedor de alojamiento durante periodos breves, según su propia política.",
+        ],
+      },
+      {
+        title: "Destinatarios",
+        body: [
+          "No cedo tus datos a terceros salvo obligación legal. Para funcionar, el sitio se apoya en proveedores que actúan como encargados del tratamiento: Vercel Inc. (alojamiento web) y Cloudflare, Inc. (recepción y reenvío del correo de {domain}), además del proveedor del buzón en el que leo ese correo.",
+        ],
+      },
+      {
+        title: "Transferencias internacionales",
+        body: [
+          "Vercel y Cloudflare son empresas de Estados Unidos, por lo que algunos datos pueden tratarse fuera del Espacio Económico Europeo. Ambas están adheridas al Marco de Privacidad de Datos UE-EE. UU. (Data Privacy Framework), que la Comisión Europea reconoce como garantía de un nivel de protección adecuado.",
         ],
       },
       {
         title: "Cookies",
         body: [
-          "El sitio solo guarda una cookie técnica (NEXT_LOCALE) cuando cambias el idioma manualmente, para recordar tu elección. No contiene datos personales ni se usa para rastrearte.",
-        ],
-      },
-      {
-        title: "Alojamiento",
-        body: [
-          "El sitio está alojado en Vercel, que puede tratar datos técnicos como tu dirección IP en los registros del servidor para servir las páginas y proteger el servicio.",
+          "{domain} no usa cookies de analítica, de publicidad ni de terceros. Por eso no verás un aviso de cookies.",
+          "Solo existe una cookie propia y técnica, NEXT_LOCALE, que se guarda cuando cambias el idioma manualmente para recordar tu elección. Dura un año, no contiene datos personales y no se usa para rastrearte. Al ser necesaria para una función que tú solicitas, no requiere consentimiento (art. 22.2 de la LSSI). Puedes borrarla cuando quieras desde la configuración de tu navegador.",
         ],
       },
       {
         title: "Tus derechos",
         body: [
-          "Puedes solicitar el acceso, la rectificación o la supresión de cualquier dato personal que me hayas enviado escribiendo al email de contacto.",
+          "Puedes ejercer tus derechos de acceso, rectificación, supresión, oposición, limitación del tratamiento y portabilidad escribiendo a {email}. Te responderé en el plazo máximo de un mes.",
+          "Si consideras que no he tratado tus datos correctamente, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).",
+        ],
+      },
+      {
+        title: "Cambios en esta política",
+        body: [
+          "Si esta política cambia, actualizaré la fecha que aparece al principio de la página.",
+        ],
+      },
+    ],
+  },
+  steporbitPrivacy: {
+    metaTitle: "Política de privacidad de StepOrbit",
+    metaDescription:
+      "Cómo trata tus datos StepOrbit, la app de pasos para Apple Watch de ROLTEK: lee tus pasos de Salud y nada sale de tu reloj.",
+    eyebrow: "StepOrbit · Legal",
+    title: "Política de privacidad de StepOrbit",
+    updated: "Última actualización",
+    sections: [
+      {
+        title: "Responsable",
+        body: [
+          "{name} (NIF {taxId}), con domicilio en {address}, desarrolla y publica StepOrbit bajo la marca ROLTEK. Esta política explica cómo trata tus datos la app StepOrbit para Apple Watch, incluida su complicación para la esfera. Para cualquier duda, escríbeme a {email}.",
+        ],
+      },
+      {
+        title: "En resumen",
+        body: [
+          "StepOrbit no recopila tus datos ni los envía a ningún servidor. No tiene cuentas de usuario, servidores propios, analítica, publicidad ni SDK de terceros. Todo lo que hace la app ocurre en tu Apple Watch.",
+        ],
+      },
+      {
+        title: "Datos de salud (HealthKit)",
+        body: [
+          "Con tu permiso, StepOrbit lee de la app Salud (HealthKit) el número de pasos de hoy. Es el único dato de salud al que accede, y solo lo lee: nunca escribe ni modifica datos en Salud.",
+          "Los pasos se usan exclusivamente para mostrarte tu recuento diario, tu progreso hacia el objetivo y la complicación de la esfera. No se usan con fines publicitarios ni de marketing, no se venden y no se comparten con nadie, tampoco con servicios en la nube.",
+        ],
+      },
+      {
+        title: "Datos que la app guarda en el reloj",
+        body: [
+          "Para funcionar, StepOrbit guarda en el almacenamiento local del Apple Watch, compartido solo entre la app y su complicación, el objetivo diario que configures, el último recuento de pasos y la hora en que se obtuvo. Este último sirve para que la complicación muestre un valor aunque Salud no esté disponible un momento, por ejemplo con el reloj bloqueado.",
+          "La app no envía estos datos a ningún sitio. Se eliminan al desinstalarla.",
+        ],
+      },
+      {
+        title: "A qué datos tengo acceso",
+        body: [
+          "A ninguno. Como todo ocurre en tu reloj, no puedo ver tus pasos, tu objetivo ni ningún otro dato que use la app.",
+        ],
+      },
+      {
+        title: "Diagnósticos de Apple",
+        body: [
+          "Si en tu iPhone has aceptado compartir datos de análisis con los desarrolladores, Apple puede facilitarme informes de fallos y estadísticas de uso agregadas y anónimas a través de App Store Connect. Los recopila y gestiona Apple según su propia política de privacidad, y solo los uso para corregir errores y mejorar la app.",
+          "Puedes desactivarlo en el iPhone, en Ajustes > Privacidad y seguridad > Análisis y mejoras.",
+        ],
+      },
+      {
+        title: "Cómo controlar tus datos",
+        body: [
+          "Dar acceso a Salud es opcional. Puedes concederlo o retirarlo cuando quieras en el iPhone, en Ajustes > Privacidad y seguridad > Salud > StepOrbit. Sin ese permiso, la app no puede mostrar tus pasos.",
+          "Para borrar todos los datos de StepOrbit, desinstala la app del Apple Watch.",
+        ],
+      },
+      {
+        title: "Tus derechos",
+        body: [
+          "Como no trato tus datos en ningún servidor, no guardo información tuya que pueda consultar, rectificar o borrar: todo está bajo tu control en el reloj. Si me escribes a {email}, ese correo se trata según la política de privacidad general de {domain}.",
+          "Si consideras que tus datos no se han tratado correctamente, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).",
+        ],
+      },
+      {
+        title: "Cambios en esta política",
+        body: [
+          "Si StepOrbit empieza a tratar otros datos, actualizaré esta política antes de publicar esa versión y cambiaré la fecha que aparece al principio de la página.",
+        ],
+      },
+    ],
+  },
+  legal: {
+    metaTitle: "Aviso legal",
+    metaDescription: "Titular, condiciones de uso y propiedad intelectual de roltek.es.",
+    eyebrow: "Legal",
+    title: "Aviso legal",
+    updated: "Última actualización",
+    owner: {
+      name: "Titular",
+      taxId: "NIF",
+      address: "Domicilio",
+      email: "Email",
+    },
+    sections: [
+      {
+        title: "Titular del sitio web",
+        body: [
+          "En cumplimiento del artículo 10 de la Ley 34/2002, de servicios de la sociedad de la información y de comercio electrónico (LSSI-CE), se informa de que {domain} es el sitio web personal de {name}, cuyos datos identificativos aparecen arriba.",
+          "ROLTEK es el nombre con el que publico mi trabajo; no es una sociedad ni una marca registrada. El sitio no vende productos ni presta servicios a través de internet: su finalidad es dar a conocer mis proyectos y mi trayectoria profesional.",
+        ],
+      },
+      {
+        title: "Condiciones de uso",
+        body: [
+          "El acceso al sitio es gratuito y no requiere registro. Al navegar por él te comprometes a usarlo de forma lícita, sin dañar su funcionamiento ni intentar acceder a partes que no son públicas.",
+        ],
+      },
+      {
+        title: "Propiedad intelectual",
+        body: [
+          "Los textos, diseños, logotipos, imágenes y el código propio del sitio pertenecen a {name}, salvo que se indique otra cosa. Puedes enlazar y citar el contenido indicando la fuente; para cualquier otro uso, pide permiso antes.",
+          "El código publicado en repositorios abiertos se rige por la licencia indicada en cada repositorio. Los nombres y marcas de terceros pertenecen a sus respectivos titulares.",
+        ],
+      },
+      {
+        title: "Responsabilidad",
+        body: [
+          "Intento que la información sea correcta y esté actualizada, pero no puedo garantizar que esté libre de errores ni que el sitio esté siempre disponible.",
+          "Los enlaces a sitios externos se ofrecen por comodidad. No controlo su contenido ni respondo de él.",
+        ],
+      },
+      {
+        title: "Protección de datos",
+        body: [
+          "Cómo se tratan tus datos personales y qué cookies usa el sitio se explica en la política de privacidad, enlazada en el pie de página.",
+        ],
+      },
+      {
+        title: "Legislación aplicable",
+        body: [
+          "Este aviso legal se rige por la legislación española. Cualquier controversia se someterá a los juzgados y tribunales que correspondan conforme a la ley; si actúas como consumidor, a los de tu domicilio.",
         ],
       },
     ],

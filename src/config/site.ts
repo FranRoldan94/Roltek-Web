@@ -9,6 +9,12 @@ export const siteConfig = {
   founderFullName: "Francisco Roldán",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://roltek.es",
   email: process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? "contacto@roltek.es",
+  /** Site owner as required by art. 10 LSSI, shown in the legal notice and privacy policy. */
+  owner: {
+    name: "Francisco Roldán Moreno",
+    taxId: "31005568G",
+    address: "C/ El Rosario, nº 6",
+  },
   links: {
     github: "https://github.com/FranRoldan94",
   },
@@ -22,6 +28,7 @@ export const siteConfig = {
   founderFullName: string;
   url: string;
   email: string;
+  owner: { name: string; taxId: string; address: string };
   links: Record<string, string>;
   socials: readonly { label: string; href: string; icon: "github" | "mail" }[];
 };
