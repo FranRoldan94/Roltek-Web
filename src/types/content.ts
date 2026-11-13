@@ -36,6 +36,8 @@ export type Project = {
   liveUrl?: string;
   /** Locale-relative path to the app's privacy policy, e.g. "/privacy/steporbit". */
   privacyPath?: string;
+  /** Locale-relative path to the app's support page, e.g. "/support/mindcrown". */
+  supportPath?: string;
   featured: boolean;
 };
 
