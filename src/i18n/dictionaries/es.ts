@@ -225,6 +225,8 @@ const es: Dictionary = {
     next: "Siguiente proyecto",
     privacy: "Privacidad",
     privacyLink: "Política de privacidad de la app",
+    support: "Soporte",
+    supportLink: "Ayuda y contacto",
   },
   blog: {
     metaTitle: "Blog",
@@ -387,6 +389,140 @@ const es: Dictionary = {
         title: "Cambios en esta política",
         body: [
           "Si StepOrbit empieza a tratar otros datos, actualizaré esta política antes de publicar esa versión y cambiaré la fecha que aparece al principio de la página.",
+        ],
+      },
+    ],
+  },
+  mindcrownPrivacy: {
+    metaTitle: "Política de privacidad de Mindcrown",
+    metaDescription:
+      "Cómo trata tus datos Mindcrown, la app de puzzles de lógica de ROLTEK: sin cuentas, sin servidores propios y sin publicidad.",
+    eyebrow: "Mindcrown · Legal",
+    title: "Política de privacidad de Mindcrown",
+    updated: "Última actualización",
+    sections: [
+      {
+        title: "Responsable",
+        body: [
+          "{name} (NIF {taxId}), con domicilio en {address}, desarrolla y publica Mindcrown bajo la marca ROLTEK. Esta política explica cómo trata tus datos la app Mindcrown para iPhone. Para cualquier duda, escríbeme a {email}.",
+        ],
+      },
+      {
+        title: "En resumen",
+        body: [
+          "Mindcrown no tiene cuentas de usuario, servidores propios, analítica, publicidad ni SDK de terceros. Tus partidas se guardan en tu iPhone. Las clasificaciones, los logros y las partidas con amigos funcionan a través de Game Center, el servicio de Apple.",
+        ],
+      },
+      {
+        title: "Datos que la app guarda en tu iPhone",
+        body: [
+          "Para mostrarte tu progreso, Mindcrown guarda en el almacenamiento local del iPhone el historial de tus partidas (juego, nivel, tiempo, pistas usadas y fecha), tus récords, la fecha de tu último duelo gratuito y, durante un duelo de Picas y Fijas, el número secreto que has elegido.",
+          "Estos datos no salen de tu iPhone y se eliminan al desinstalar la app.",
+        ],
+      },
+      {
+        title: "Game Center",
+        body: [
+          "Si inicias sesión en Game Center, la app envía a Apple tus puntuaciones y logros para mostrarlos en las clasificaciones, junto con tu alias de Game Center. Game Center lo gestiona Apple según su propia política de privacidad, y puedes dejar de usarlo en Ajustes > Game Center.",
+          "En las partidas con amigos, Game Center transmite entre los dispositivos de los jugadores los datos de la partida: en Tempo, los tiempos de cada ronda; en Picas y Fijas, los números que probáis y las respuestas. Tu número secreto de Picas y Fijas no se envía hasta que termina el duelo; mientras tanto solo se comparte una huella cifrada que permite comprobar al final que nadie lo ha cambiado.",
+        ],
+      },
+      {
+        title: "Compras dentro de la app",
+        body: [
+          "La compra de los duelos ilimitados la gestiona Apple a través del App Store. Yo no recibo tus datos de pago; la app solo comprueba con Apple si la compra está activa en tu cuenta.",
+        ],
+      },
+      {
+        title: "A qué datos tengo acceso",
+        body: [
+          "A ninguno de forma individual. No puedo ver tus partidas, tus números secretos ni tus datos de Game Center. App Store Connect solo me muestra cifras agregadas de ventas y descargas.",
+        ],
+      },
+      {
+        title: "Diagnósticos de Apple",
+        body: [
+          "Si has aceptado compartir datos de análisis con los desarrolladores, Apple puede facilitarme informes de fallos y estadísticas de uso agregadas y anónimas a través de App Store Connect. Los recopila y gestiona Apple según su propia política de privacidad, y solo los uso para corregir errores y mejorar la app.",
+          "Puedes desactivarlo en Ajustes > Privacidad y seguridad > Análisis y mejoras.",
+        ],
+      },
+      {
+        title: "Menores",
+        body: [
+          "Mindcrown es apta para todas las edades y no recoge datos personales. Las funciones sociales dependen de Game Center, que incluye controles parentales en Ajustes > Tiempo de uso > Restricciones de contenido y privacidad.",
+        ],
+      },
+      {
+        title: "Tus derechos",
+        body: [
+          "Como no trato tus datos en ningún servidor, no guardo información tuya que pueda consultar, rectificar o borrar: lo que guarda la app está en tu iPhone y lo de Game Center en tu cuenta de Apple. Si me escribes a {email}, ese correo se trata según la política de privacidad general de {domain}.",
+          "Si consideras que tus datos no se han tratado correctamente, puedes presentar una reclamación ante la Agencia Española de Protección de Datos (www.aepd.es).",
+        ],
+      },
+      {
+        title: "Cambios en esta política",
+        body: [
+          "Si Mindcrown empieza a tratar otros datos, actualizaré esta política antes de publicar esa versión y cambiaré la fecha que aparece al principio de la página.",
+        ],
+      },
+    ],
+  },
+  mindcrownSupport: {
+    metaTitle: "Soporte de Mindcrown",
+    metaDescription:
+      "Ayuda y contacto para Mindcrown, la app de puzzles de lógica de ROLTEK: duelos con amigos, compras, Game Center y preguntas frecuentes.",
+    eyebrow: "Mindcrown · Soporte",
+    title: "Ayuda con Mindcrown",
+    updated: "Última actualización",
+    sections: [
+      {
+        title: "Contacto",
+        body: [
+          "Si algo no funciona o tienes una sugerencia, escríbeme a {email} indicando el modelo de iPhone, la versión de iOS y, si puedes, una captura de pantalla. Respondo normalmente en uno o dos días laborables.",
+        ],
+      },
+      {
+        title: "Juegos",
+        body: [
+          "Mindcrown incluye Coronas, Binario, Sudoku y Trazo, con un reto diario igual para todos y un modo automático que adapta la dificultad a tu nivel. Además tiene dos desafíos: Tempo, en el que paras un cronómetro oculto en el momento exacto, y Picas y Fijas, en el que adivinas un número secreto. Cada juego explica sus reglas en el botón de ayuda de su pantalla.",
+        ],
+      },
+      {
+        title: "Duelos con amigos",
+        body: [
+          "Los duelos usan Game Center, así que tú y tus amigos tenéis que haber iniciado sesión en Ajustes > Game Center. Tempo se juega en vivo, de 2 a 4 jugadores. Picas y Fijas se juega por turnos: cada uno elige un número secreto y recibiréis un aviso cuando os toque.",
+          "Crear un duelo es gratis una vez al día; con la compra de duelos ilimitados puedes crear todos los que quieras. Unirte a un duelo al que te invitan y pedir la revancha siempre es gratis.",
+        ],
+      },
+      {
+        title: "Mi número secreto no aparece",
+        body: [
+          "En Picas y Fijas, tu número secreto se guarda solo en el iPhone donde lo elegiste, para que tu rival no pueda verlo. Si abres el duelo en otro dispositivo o reinstalas la app, no se podrá responder a tu rival; en ese caso puedes abandonar el duelo y empezar otro.",
+        ],
+      },
+      {
+        title: "Restaurar la compra",
+        body: [
+          "Si has comprado los duelos ilimitados y no aparecen, o has cambiado de iPhone, abre la pantalla de compra desde «Jugar con amigos» y pulsa «Restaurar compras» con la misma cuenta de Apple. La compra se puede compartir con En familia.",
+          "Los reembolsos los gestiona Apple en reportaproblem.apple.com.",
+        ],
+      },
+      {
+        title: "Ranking y logros",
+        body: [
+          "Las clasificaciones y los logros necesitan Game Center. Si juegas sin conexión, la app guarda tu progreso y envía los logros conseguidos la próxima vez que se conecte.",
+        ],
+      },
+      {
+        title: "Idiomas",
+        body: [
+          "La app está en español e inglés y usa el idioma de tu iPhone. Puedes cambiarlo solo para Mindcrown en Ajustes > Apps > Mindcrown > Idioma.",
+        ],
+      },
+      {
+        title: "Privacidad",
+        body: [
+          "Mindcrown no tiene cuentas, publicidad ni analítica propia. Puedes leer los detalles en la política de privacidad de la app, enlazada desde su ficha en {domain}.",
         ],
       },
     ],

@@ -11,6 +11,8 @@ const staticPaths = [
   "/contact",
   "/privacy",
   "/privacy/steporbit",
+  "/privacy/mindcrown",
+  "/support/mindcrown",
   "/legal",
 ];
 

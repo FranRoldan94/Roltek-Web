@@ -223,6 +223,8 @@ const en = {
     next: "Next project",
     privacy: "Privacy",
     privacyLink: "App privacy policy",
+    support: "Support",
+    supportLink: "Help and contact",
   },
   blog: {
     metaTitle: "Blog",
@@ -385,6 +387,140 @@ const en = {
         title: "Changes to this policy",
         body: [
           "If StepOrbit starts processing other data, I will update this policy before releasing that version and change the date shown at the top of the page.",
+        ],
+      },
+    ],
+  },
+  mindcrownPrivacy: {
+    metaTitle: "Mindcrown privacy policy",
+    metaDescription:
+      "How Mindcrown, ROLTEK's logic puzzle app, handles your data: no accounts, no servers of its own and no ads.",
+    eyebrow: "Mindcrown · Legal",
+    title: "Mindcrown privacy policy",
+    updated: "Last updated",
+    sections: [
+      {
+        title: "Controller",
+        body: [
+          "{name} (tax ID {taxId}), based at {address}, develops and publishes Mindcrown under the ROLTEK brand. This policy explains how the Mindcrown iPhone app handles your data. For any questions, write to me at {email}.",
+        ],
+      },
+      {
+        title: "In short",
+        body: [
+          "Mindcrown has no user accounts, servers of its own, analytics, ads or third-party SDKs. Your games are stored on your iPhone. Leaderboards, achievements and games with friends work through Game Center, Apple's service.",
+        ],
+      },
+      {
+        title: "Data the app stores on your iPhone",
+        body: [
+          "To show your progress, Mindcrown stores in your iPhone's local storage the history of your games (game, level, time, hints used and date), your records, the date of your last free duel and, during a Bulls and Cows duel, the secret number you chose.",
+          "This data never leaves your iPhone and is deleted when you uninstall the app.",
+        ],
+      },
+      {
+        title: "Game Center",
+        body: [
+          "If you sign in to Game Center, the app sends your scores and achievements to Apple to show them on the leaderboards, together with your Game Center nickname. Game Center is run by Apple under its own privacy policy, and you can stop using it in Settings > Game Center.",
+          "In games with friends, Game Center transmits the game data between the players' devices: in Tempo, the time of each round; in Bulls and Cows, the numbers you guess and the answers. Your secret number in Bulls and Cows is not sent until the duel ends; until then only an encrypted fingerprint is shared, which lets both players check at the end that nobody changed it.",
+        ],
+      },
+      {
+        title: "In-app purchases",
+        body: [
+          "The unlimited duels purchase is handled by Apple through the App Store. I never receive your payment details; the app only checks with Apple whether the purchase is active on your account.",
+        ],
+      },
+      {
+        title: "What data I can access",
+        body: [
+          "None on an individual level. I can't see your games, your secret numbers or your Game Center data. App Store Connect only shows me aggregated sales and download figures.",
+        ],
+      },
+      {
+        title: "Apple diagnostics",
+        body: [
+          "If you have agreed to share analytics with developers, Apple may provide me with crash reports and aggregated, anonymous usage statistics through App Store Connect. Apple collects and manages them under its own privacy policy, and I only use them to fix bugs and improve the app.",
+          "You can turn this off in Settings > Privacy & Security > Analytics & Improvements.",
+        ],
+      },
+      {
+        title: "Children",
+        body: [
+          "Mindcrown is suitable for all ages and does not collect personal data. Social features rely on Game Center, which includes parental controls in Settings > Screen Time > Content & Privacy Restrictions.",
+        ],
+      },
+      {
+        title: "Your rights",
+        body: [
+          "Since I don't process your data on any server, I don't keep any information about you that you could access, correct or delete: what the app stores is on your iPhone and what Game Center stores is in your Apple account. If you email me at {email}, that email is handled under the general privacy policy of {domain}.",
+          "If you believe your data has not been handled properly, you can file a complaint with the Spanish Data Protection Agency (www.aepd.es).",
+        ],
+      },
+      {
+        title: "Changes to this policy",
+        body: [
+          "If Mindcrown starts handling other data, I will update this policy before releasing that version and change the date shown at the top of the page.",
+        ],
+      },
+    ],
+  },
+  mindcrownSupport: {
+    metaTitle: "Mindcrown support",
+    metaDescription:
+      "Help and contact for Mindcrown, ROLTEK's logic puzzle app: duels with friends, purchases, Game Center and frequently asked questions.",
+    eyebrow: "Mindcrown · Support",
+    title: "Mindcrown help",
+    updated: "Last updated",
+    sections: [
+      {
+        title: "Contact",
+        body: [
+          "If something isn't working or you have a suggestion, write to me at {email} with your iPhone model, iOS version and, if possible, a screenshot. I usually reply within one or two business days.",
+        ],
+      },
+      {
+        title: "Games",
+        body: [
+          "Mindcrown includes Crowns, Binary, Sudoku and Path, with a daily challenge that's the same for everyone and an automatic mode that adapts the difficulty to your level. It also has two challenges: Tempo, where you stop a hidden stopwatch at exactly the right moment, and Bulls and Cows, where you guess a secret number. Each game explains its rules from the help button on its screen.",
+        ],
+      },
+      {
+        title: "Duels with friends",
+        body: [
+          "Duels use Game Center, so you and your friends need to be signed in under Settings > Game Center. Tempo is played live, with 2 to 4 players. Bulls and Cows is turn-based: each of you picks a secret number and you'll get a notification when it's your turn.",
+          "Creating a duel is free once a day; with the unlimited duels purchase you can create as many as you like. Joining a duel you're invited to and asking for a rematch are always free.",
+        ],
+      },
+      {
+        title: "My secret number is missing",
+        body: [
+          "In Bulls and Cows, your secret number is stored only on the iPhone where you chose it, so your opponent can't see it. If you open the duel on another device or reinstall the app, it can't answer your opponent; in that case you can quit the duel and start a new one.",
+        ],
+      },
+      {
+        title: "Restoring your purchase",
+        body: [
+          "If you bought unlimited duels and they don't show up, or you've switched iPhones, open the purchase screen from “Play with friends” and tap “Restore purchases” with the same Apple Account. The purchase can be shared with Family Sharing.",
+          "Refunds are handled by Apple at reportaproblem.apple.com.",
+        ],
+      },
+      {
+        title: "Leaderboards and achievements",
+        body: [
+          "Leaderboards and achievements require Game Center. If you play offline, the app keeps your progress and sends the achievements you've earned the next time it connects.",
+        ],
+      },
+      {
+        title: "Languages",
+        body: [
+          "The app is available in English and Spanish and uses your iPhone's language. You can change it just for Mindcrown in Settings > Apps > Mindcrown > Language.",
+        ],
+      },
+      {
+        title: "Privacy",
+        body: [
+          "Mindcrown has no accounts, ads or analytics of its own. You can read the details in the app's privacy policy, linked from its page on {domain}.",
         ],
       },
     ],
